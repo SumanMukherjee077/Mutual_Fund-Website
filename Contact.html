@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <title>Contact Us</title>
+    <body>
+      
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                
+            }
+            #btn{
+                text-align: center;
+                height: 78px;
+                background-color: rgb(2, 2, 2);
+                
+                
+                
+                
+            }
+            .fb{
+                background-color: rgb(186, 154, 11);
+                border-radius: 25px;
+                font-size: 18px;
+                height: 35px;
+                width: 65px;
+            }
+            a{
+                margin-right: 130px;
+                font-size: 18px;
+                
+                text-decoration: none;
+                color: aliceblue;
+                padding-bottom: 20px;
+            }
+            #bb{
+                display: inline;
+                color: aliceblue;
+                margin-right: 90px;
+                font-size: 20px;
+                font-family: serif;
+            }
+
+	
+          
+            </style>
+        
+
+    <div id="btn">
+            
+    <img src="logo.png" alt="Bull" height="40px">
+
+    <p id="bb">Big Bull</p>
+
+    <a href="index.php">Home</a>
+    <a href="calculator.html">Calculator</a>
+    <a href="Bm.html">Best Mutual Funds</a>
+	<a href="bp.html">Best Platforms</a>
+    <a href="contact.html">Contact Us</a>
+    <button   class="fb" onclick="document.location='signup.php'">Signup</button>
+    <button   class="fb" onclick="document.location='login.php'">Login</button>
+
+    </div>
+    </body>
+</html>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f0f0f0;
+		}
+		.container {
+			width: 80%;
+			margin: 50px auto;
+			background-color: #fff;
+			padding: 20px;
+			border: 1px solid #ddd;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		.form-group {
+			margin-bottom: 20px;
+		}
+		.label {
+			display: block;
+			margin-bottom: 10px;
+		}
+		.input-field {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 10px;
+			border: 1px solid #000000;
+		}
+		.button {
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 10px 10px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		.button:hover {
+			background-color: #3e8e41;
+		}
+		.submitted-message {
+			display: none;
+			padding: 20px;
+			background-color: #dff0df;
+			border: 1px solid #3e8e41;
+			border-radius: 5px;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h2>Contact Us</h2>
+		<form id="contact-form">
+			<div class="form-group">
+				<label for="name" class="label">Name:</label>
+				<input type="text" id="name" name="name" class="input-field" required>
+			</div>
+			<div class="form-group">
+				<label for="email" class="label">Email:</label>
+				<input type="email" id="email" name="email" class="input-field" required>
+			</div>
+			<div class="form-group">
+				<label for="message" class="label">Message:</label>
+				<textarea id="message" name="message" class="input-field" required></textarea>
+			</div>
+			<button type="submit" class="button">Send Message</button>
+			<div class="submitted-message" id="submitted-message">
+				<p>Your message has been sent successfully!</p>
+				<p>We will be contact as soon as posible with your given email id:</p>
+				<ul id="submitted-data">
+				</ul>
+			</div>
+		</form>
+	</div>
+
+	<script>
+		const form = document.getElementById('contact-form');
+		form.addEventListener('submit', (e) => {
+			e.preventDefault();
+			const name = document.getElementById('name').value;
+			const email = document.getElementById('email').value;
+			const message = document.getElementById('message').value;
+			const submittedMessage = document.getElementById('submitted-message');
+			const submittedData = document.getElementById('submitted-data');
+			submittedMessage.style.display = 'block';
+			submittedData.innerHTML = `
+				<li><strong>Name:</strong> ${name}</li>
+				<li><strong>Email:</strong> ${email}</li>
+				<li><strong>Message:</strong> ${message}</li>
+			`;
+		});
+	</script>
+</body>
+</html>
